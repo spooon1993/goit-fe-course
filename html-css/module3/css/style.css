@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img1.jpg");
+    font-family: "Pathway Gothic One";
+}
+.wrapper {
+    width: 480px;
+    margin: 10px auto;
+    background-color: white;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.75);
+}
+.box {
+    padding-bottom: 20px;
+}
+.box:last-child {
+    padding-bottom: 0;
+}
+.jet {
+    width: 100%;
+}
+ .list {
+     display: inline-block;
+     vertical-align: top;
+     list-style: none;
+     margin: 20px;
+ }
+ul > li {
+    padding: 5px;
+}
+li:before {
+    content: "\2192  ";
+    color: blue;
+}
+.line {
+    border-top: 1px solid black;
+}
+h1 {
+    margin: 20px 0;
+}
+h3 {
+    margin: 20px 0;
+}
+.box-iiner {
+    text-align: center;
+}
