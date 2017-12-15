@@ -4,50 +4,84 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url("../img/img1.jpg");
-    font-family: "Pathway Gothic One";
-    padding: 10px 0;
-}
 .wrapper {
+    background-image: url("../img/page-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.content {
     width: 480px;
-    margin: 0 auto;
     background-color: white;
-    padding: 30px 20px;
-    box-sizing: border-box;
-    box-shadow: 0 0 15px 5px rgba(0,0,0,0.75);
+    margin: auto;
+    padding: 60px 37px 44px;
+    font-family: Arial, sans-serif;
 }
-.box {
-    padding-bottom: 20px;
+
+.article {
+    margin-bottom: 51px;
 }
-.box:last-child {
-    padding-bottom: 0;
+.article-second {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 52px;
 }
-.jet {
-    width: 100%;
+.article-text {
+    margin-bottom: 37px;
 }
- .list {
-     display: inline-block;
-     vertical-align: top;
-     list-style: none;
-     margin: 20px;
- }
-ul > li {
-    padding: 5px;
+.article:last-child {
+    margin-bottom: 0;
 }
-li:before {
-    content: "\2192  ";
-    color: blue;
+.title {
+    font-family: 'Pathway Gothic One', sans-serif ;
+    text-transform: uppercase;
+    color: #263555;
+    font-size: 25px;
+    margin-bottom: 27px;
+
 }
-.line {
-    border-top: 1px solid black;
+.picture {
+    display: block;
+    margin: 0 auto 27px;
 }
-h1 {
-    margin: 20px 0;
+.sub-title {
+    font-size: 14px;
+    color: #263555;
+    line-height: 19px;
+    margin-bottom: 22px;
 }
-h3 {
-    margin: 20px 0;
+.sub-title-mod {
+    margin-bottom: 15px;
 }
-.box-iiner {
-    text-align: center;
+.text {
+    color: #4e5050;
+    font-size: 12px;
+    line-height: 17px;
+}
+ul {
+    list-style: none;
+}
+.list-article-item {
+    margin-bottom: 25px;
+}
+.list-article-item:last-child {
+    margin-bottom: 0;
+}
+
+.list-item {
+    color: #263555;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 18px;
+}
+.list-item:last-child {
+    margin-bottom: 0;
+}
+.list {
+    display: inline-block;
+    vertical-align: top;
+}
+.list:last-child {
+    margin-left: 50px;
 }
