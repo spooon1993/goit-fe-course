@@ -78,6 +78,7 @@ ul {
 .list-item:last-child {
     margin-bottom: 0;
 }
+
 .list {
     display: inline-block;
     vertical-align: top;
