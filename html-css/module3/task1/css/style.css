@@ -44,3 +44,33 @@
 .sidebar {
     width: 218px;
 }
+.main-inline {
+    display: inline-block;
+    vertical-align: top;
+}
+.main {
+    width: 732px;
+    padding-left: 20px;
+}
+.main div {
+    margin-bottom: 30px;
+}
+.sub-description {
+    display: inline-block;
+}
+.sub-table {
+    width: 100%;
+    background-color:  #373e47;
+    border: 1px solid #292e35;
+    border-radius: 3px;
+}
+.table-head {
+    background-color: #292e35;
+    color: white;
+}
+ .sub-table td {
+    padding: 4px 11px;
+}
+ .clear-style {
+     list-style: none;
+ }
