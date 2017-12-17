@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #e4e4e4;
+}
+a {
+    color: #ff8de3;
 }
 .wrapper {
     padding: 20px;
-    /*background-color: #424a55;*/
     background: url("../img/Layer 1.jpg");
 }
 .container {
@@ -41,8 +44,30 @@
     text-align: justify;
     padding: 0 30px;
 }
+.nav-link {
+    color: #143567;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: #a45f93;
+}
 .sidebar {
     width: 218px;
+}
+.sidebar-list {
+    list-style: url("../img/Layer 10 copy 2.png");
+    padding-left: 10px;
+}
+.sidebar-list li {
+    padding: 4px;
+
+}
+.sidebar-item {
+    background-color: #373e47;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3);
+    padding: 12px 14px;
 }
 .main-inline {
     display: inline-block;
@@ -55,21 +80,46 @@
 .main div {
     margin-bottom: 30px;
 }
+.title {
+    margin-bottom: 12px;
+    color: #fefefe;
+    font-size: 16px;
+}
 .sub-description {
     display: inline-block;
+    padding: 0 3%;
+}
+.text {
+    font-size: 12px;
+}
+li {
+    font-size: 13px;
+
+}
+.sub-title {
+    margin-bottom: 12px;
+    font-size: 14px;
+
 }
 .sub-table {
     width: 100%;
     background-color:  #373e47;
     border: 1px solid #292e35;
     border-radius: 3px;
+    border-collapse: collapse;
+}
+.table {
+    border-collapse: collapse;
+    font-size: 13px;
 }
 .table-head {
     background-color: #292e35;
     color: white;
+    font-weight: bold;
 }
  .sub-table td {
     padding: 4px 11px;
+     border: 1px solid #4c545e;
 }
  .clear-style {
      list-style: none;
