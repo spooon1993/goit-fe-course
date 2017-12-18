@@ -32,7 +32,7 @@
     margin: 10px;
     list-style: none;
 }
-.list-floating:after {
+.floating-list:after {
     content: "";
     display: table;
     clear: both;
