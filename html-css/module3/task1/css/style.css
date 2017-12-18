@@ -62,7 +62,10 @@ a {
 }
 .sidebar-list li {
     padding: 4px;
-
+    border-bottom: 1px solid #4c545e;
+}
+.sidebar-list li:last-child {
+    border-bottom: 0;
 }
 .sidebar-item {
     background-color: #373e47;
@@ -93,11 +96,9 @@ a {
     color: #fefefe;
     font-size: 16px;
 }
-.main-gallery {
-
-}
 .pict {
     margin: 0 10px;
+    border: 5px solid #697689;
 }
 .sub-description {
     display: inline-block;
