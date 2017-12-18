@@ -23,7 +23,7 @@ a {
 }
 .inline {
     display: inline-block;
-    line-height: 45px;
+    line-height: 42px;
 }
 .workspace {
     margin-top: 34px;
@@ -34,6 +34,7 @@ a {
 }
 .logo {
     margin-left: 17px;
+    vertical-align: middle;
 }
 .nav {
     margin-left: 190px;
@@ -42,11 +43,12 @@ a {
 .nav-item {
     display: inline-block;
     text-align: justify;
-    padding: 0 30px;
 }
 .nav-link {
     color: #143567;
     text-decoration: none;
+    padding: 0 30px;
+    display: block;
 }
 .nav-link:hover {
     color: #a45f93;
@@ -69,25 +71,37 @@ a {
     box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3);
     padding: 12px 14px;
 }
+.sidebar-item:last-child {
+    margin-bottom: 0;
+}
 .main-inline {
     display: inline-block;
     vertical-align: top;
 }
 .main {
     width: 732px;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 .main-box {
     margin-bottom: 30px;
+}
+.main-box:last-child {
+    margin-bottom: 0;
 }
 .title {
     margin-bottom: 12px;
     color: #fefefe;
     font-size: 16px;
 }
+.main-gallery {
+
+}
+.pict {
+    margin: 0 10px;
+}
 .sub-description {
     display: inline-block;
-    padding: 0 3%;
+    margin: 0 3%;
 }
 .text {
     font-size: 12px;
@@ -140,6 +154,8 @@ li {
 }
 .form-check {
     margin: 20px 0;
+    display: block;
+    width: 300px;
 }
 .button-submit {
     display: block;
@@ -148,4 +164,7 @@ li {
     background: linear-gradient(0deg, #a45f93 0%, #b76da5 100%);
     border-radius: 5px;
     margin-top: 15px;
+}
+.sidebar-link {
+    margin-left: 12px;
 }

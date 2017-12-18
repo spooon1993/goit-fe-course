@@ -41,7 +41,7 @@
                 <div class="sidebar-item">
                     <h2 class="title">Left Block</h2>
                     <p class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                    <a href="#">Read more ></a>
+                    <a href="#" class="sidebar-link">Read more ></a>
                 </div>
             </div>
             <div class="main main-box main-inline">
@@ -52,9 +52,11 @@
                 </div>
                 <div class="gallery main-box">
                     <h2 class="title">Images</h2>
-                    <img src="https://source.unsplash.com/random/200x200" alt="img1" class="pict">
-                    <img src="https://source.unsplash.com/random/200x200" alt="img2" class="pict">
-                    <img src="https://source.unsplash.com/random/200x200" alt="img3" class="pict">
+                    <div class="main-gallery">
+                        <img src="https://source.unsplash.com/random/200x200" alt="img1" class="pict">
+                        <img src="https://source.unsplash.com/random/200x200" alt="img2" class="pict">
+                        <img src="https://source.unsplash.com/random/200x200" alt="img3" class="pict">
+                    </div>
                 </div>
                 <div class="description main-box">
                     <h2 class="title">Lists and Descriptions</h2>
@@ -132,14 +134,14 @@
                             <option value="">Option 3</option>
                         </select>
                     </div>
-                    <p class="form-check">
+                    <label for="checkbox" class="form-check">
                         <input type="checkbox" id="checkbox" >
-                        <label for="checkbox">  Sed ut perspiciatis unde omnis iste natus</label>
-                    </p>
-                    <p class="form-check">
+                        Sed ut perspiciatis unde omnis iste natus
+                    </label>
+                    <label for="radio" class="form-check">
                         <input type="radio" id="radio" >
-                        <label for="radio">  Lorem ipsum dolor sit amet, consectetur</label>
-                    </p>
+                        Lorem ipsum dolor sit amet, consectetur
+                    </label>
                     <h5>Textarea:</h5>
                     <textarea name="" id="textarea" cols="30" rows="5"></textarea>
                     <input type="button" value="Button" class="button-submit">
