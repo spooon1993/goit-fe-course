@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    counter-reset: count-sidebar-box;
+}
+.wrapper {
+    background-image: url("../img/page-bg (1).jpg");
+    padding: 50px;
+}
+.container {
+    width: 1024px;
+    margin: auto;
+    background-color: white;
+    padding: 80px 30px;
+}
+.first-block {
+    border-bottom: 1px solid black;
+}
+.inline {
+    display: inline-block;
+    vertical-align: top;
+}
+.first-main {
+    width: 640px;
+}
+.first-sidebar {
+    width: 260px;
+    margin-left: 50px;
+}
+.first-sidebar-item {
+    counter-increment: count-sidebar-box;
+}
+.first-sidebar-item:before {
+    content: counter(count-sidebar-box);
+    display: block;
+    background-color: darkseagreen;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.pict {
+    float: left;
+    margin: 10px 24px 10px 0;
+}
+.title {
+    font-size: 32px;
+    color: #263555;
+    margin-bottom: 48px;
+    font-family: 'Pathway Gothic One';
+}
+.sub-title {
+    font-size: 15px;
+    color: #263555;
+    margin-bottom: 15px;
+}
+.text {
+    font-size: 13px;
+    color: #4e5050;
+    margin-bottom: 14px;
+}
+.second-main {
+    width: 640px;
+}
+.second-sidebar {
+    width: 260px;
+    margin-left: 50px;
+    text-align: center;
+}
+.first-block, .second-block {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+.second-block:last-child {
+    margin: 0;
+    padding: 0;
+}
+.second-main-list {
+    display: inline-block;
+    width: 300px;
+    font-size: 15px;
+    list-style: none;
+}
+.second-main-item {
+    color: #263555;
+    margin: 13px;
+}
+.second-main-item:before {
+    content: "\2192  ";
+    color: blue;
+}
+.second-sidebar-title {
+    background-image: url("../img/Layer 85 copy.png");
+    font-size: 15px;
+    color: #263555;
+    height: 219px;
+    width: 211px;
+    padding: 15px 12px 40px;
+    margin: 0 auto 35px;
+}
+.second-sidebar-title:before {
+    content: "\"";
+}
+.second-sidebar-title:after {
+    content: "\"";
+}
