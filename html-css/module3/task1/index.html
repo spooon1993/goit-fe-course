@@ -44,19 +44,19 @@
                     <a href="#">Read more ></a>
                 </div>
             </div>
-            <div class="main main-inline">
-                <div class="info">
+            <div class="main main-box main-inline">
+                <div class="info main-box">
                     <h2 class="title">Lorem ipsum dolor sit amet, consectetur.</h2>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facilis inventore nesciunt nostrum tempore. Accusamus adipisci aut cupiditate distinctio dolore, eaque error ipsam, iste nemo quisquam sint tempora temporibus veritatis voluptas voluptate!
                         <a href="#">Consectetur et exercitationem harum molestiae necessitatibus voluptate voluptates?</a></p>
                 </div>
-                <div class="gallery">
+                <div class="gallery main-box">
                     <h2 class="title">Images</h2>
                     <img src="https://source.unsplash.com/random/200x200" alt="img1" class="pict">
                     <img src="https://source.unsplash.com/random/200x200" alt="img2" class="pict">
                     <img src="https://source.unsplash.com/random/200x200" alt="img3" class="pict">
                 </div>
-                <div class="description">
+                <div class="description main-box">
                     <h2 class="title">Lists and Descriptions</h2>
                     <div class="sub-description">
                         <h3 class="sub-title">Unordered list</h3>
@@ -86,7 +86,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="table">
+                <div class="table main-box">
                     <h2 class="title">Table</h2>
                     <table class="sub-table">
                         <thead class="table-head">
@@ -118,23 +118,31 @@
                         </tr>
                     </table>
                 </div>
-                <div class="form">
+                <div class="form main-box">
                     <h2 class="title">Forms</h2>
-                    <h5>Text:</h5>
-                    <input type="text">
-                    <h5>Select:</h5>
-                    <select name="" id="">
-                        <option value="">Option 1</option>
-                        <option value="">Option 2</option>
-                        <option value="">Option 3</option>
-                    </select>
-
-                    <label for="checkbox"> <input type="checkbox" id="checkbox"> Sed ut perspiciatis unde omnis iste natus</label>
-
-                    <label for="radio"> <input type="radio" id="radio"> Lorem ipsum dolor sit amet, consectetur</label>
+                    <div class="form-input">
+                        <h5 class="form-sub-title">Text:</h5>
+                        <input type="text" class="form-sub-input" placeholder="input type text">
+                    </div>
+                    <div class="form-input">
+                        <h5 class="form-sub-title">Select:</h5>
+                        <select name="" id="" class="form-sub-input">
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                            <option value="">Option 3</option>
+                        </select>
+                    </div>
+                    <p class="form-check">
+                        <input type="checkbox" id="checkbox" >
+                        <label for="checkbox">  Sed ut perspiciatis unde omnis iste natus</label>
+                    </p>
+                    <p class="form-check">
+                        <input type="radio" id="radio" >
+                        <label for="radio">  Lorem ipsum dolor sit amet, consectetur</label>
+                    </p>
                     <h5>Textarea:</h5>
                     <textarea name="" id="textarea" cols="30" rows="5"></textarea>
-                    <input type="button" value="Button">
+                    <input type="button" value="Button" class="button-submit">
 
                 </div>
             </div>
