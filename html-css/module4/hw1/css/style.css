@@ -10,6 +10,7 @@ body {
 .wrapper {
     background-image: url("../img/page-bg (1).jpg");
     padding: 50px 0;
+    background-repeat: no-repeat;
 }
 .container {
     width: 1024px;
