@@ -34,14 +34,22 @@ body {
 }
 .first-sidebar-item {
     counter-increment: count-sidebar-box;
+    position: relative;
 }
 .first-sidebar-item:before {
     content: counter(count-sidebar-box);
     display: block;
-    background-color: darkseagreen;
-    border-radius: 10px;
-    width: 20px;
+    position: absolute;
+    border: 1px solid #263555;
+    left: -45px;
+    top: 5px;
+    background: #38afe5 ;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
     text-align: center;
+    border-radius: 15px;
 }
 .pict {
     float: left;
