@@ -317,7 +317,7 @@
     justify-content: center;
     align-items: flex-end;
     position: absolute;
-    top: -85px;
+    top: -95px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -332,12 +332,11 @@
     list-style: none;
 }
 .box5-list .box5-list-item:first-child {
-    padding: 10px 30px 0;
+    padding: 10px 30px;
     background-color: white;
 }
 .box5-list-item {
     background-color: #f0f0f0;
-    /*height: 40px;*/
     padding: 15px 70px;
 }
 .box5-name {
@@ -361,10 +360,28 @@
     content: "$";
     font-size: 15px;
     vertical-align: text-top;
-
 }
 .box5-list-price:after {
     content: "/mo";
     font-size: 15px;
     vertical-align: text-bottom;
 }
+.box5-list-item:last-child {
+    background-color: grey;
+}
+.box5-list-item:first-child h4 {
+    color: #616161;
+}
+.box5-list-item:first-child h5 {
+    color: #eb4f4e;
+}
+.red-price .box5-list-item:first-child h4 {
+    color: #eb4f4e;
+}
+.red-price .box5-list-item:first-child h5 {
+    color: #232324;
+}
+.red-price .box5-list-item:last-child {
+    background-color: #eb4f4e;
+}
+
