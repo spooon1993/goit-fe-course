@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    background-image: url("../img/banner.jpg");
+    text-align: center;
+    padding: 40px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Sirin Stencil', cursive;
+}
+.form {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.50);
+    margin: 50px auto 0;
+    padding: 40px 20px;
+}
+.title1 {
+    color: white;
+}
+.title2 {
+    color: white;
+    text-align: center;
+}
+.login-form {
+    margin-top: 20px;
+    position: relative;
+}
+.login-form input {
+    display: block;
+    width: 80%;
+    height: 40px;
+    margin: 15px auto;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid white;
+    padding: 0 15px;
+    color: white;
+}
+.login-form input[type=submit] {
+    width: 20%;
+    background-color: white;
+    color: black;
+}
+.form-link {
+    display: inline-block;
+    margin: 10px 20px;
+    color: white;
+    font-size: 12px;
+}
+.form-link a{
+    color: green;
+    text-decoration: none;
+}
+.form-social {
+    text-align: left;
+    margin-top: 30px;
+}
+.form-social-text {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 50px;
+    color: white;
+}
+.form-social-img {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    transition: all 0.5s;
+    border: 1px solid white;
+}
+
+.input-username {
+    background: url("../img/man-user (1).png");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 42px;
+    top: 4px;
+}
+.input-password {
+    background: url("../img/padlock.png");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 42px;
+    top: 59px;
+}
+.social-img-fb {
+    background: url('../img/css_sprites (2).png') -10px -10px;
+}
+.social-img-fb:hover {
+    background: url('../img/css_sprites (2).png') -62px -10px;
+}
+.social-img-twit {
+    background: url('../img/css_sprites (2).png') -10px -62px;
+}
+.social-img-twit:hover {
+    background: url('../img/css_sprites (2).png') -62px -62px;
+}
+.social-img-lin {
+    background: url('../img/css_sprites (2).png') -114px -62px;
+}
+.social-img-lin:hover {
+    background: url('../img/css_sprites (2).png') -114px -10px;
+}
