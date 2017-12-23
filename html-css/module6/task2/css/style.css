@@ -7,7 +7,7 @@
 
 .header {
     height: 110px;
-    background-color: #ff424e;
+    background-color: #f56262;
 
 }
 .logo {
@@ -266,6 +266,12 @@
     height: 560px;
     background-color:  rgba(236, 236, 236, 0.8);
     text-align: center;
+}
+.box4-title2 {
+    color: #616161;
+}
+.box4-title4 {
+    color: #61af66;
 }
 .box4-slide {
     display: flex;
