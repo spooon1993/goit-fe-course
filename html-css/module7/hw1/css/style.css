@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .main-block {
-    background: url("../img/PUT YOUR BACKGROUND HERE.jpg");
+    background: url("../img/PUT YOUR BACKGROUND HERE.jpg") no-repeat;
     /*height: 100vh;*/
 }
 .head {
@@ -52,6 +52,12 @@
     font-weight: bold;
     padding: 21px 0;
 }
+.title2 {
+    color: #403d4b;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0 0 28px;
+}
 .title1-border:after {
     content: "";
     display: block;
@@ -66,7 +72,7 @@
     line-height: 24px;
     color: #fff;
 }
-.we-are-button {
+.button {
     width: 120px;
     height: 40px;
     border: 1px solid #00e0d0;
@@ -92,4 +98,21 @@
 .circle:hover {
     background-color: #00e0d0;
 }
-
+.story {
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+}
+.our-story .text {
+    color: #000;
+    margin-bottom: 20px;
+}
+.our-story .text:last-child {
+    margin-bottom: 0;
+}
+.our-story {
+    width: 500px;
+}
+.story-img {
+    margin-right: 40px;
+}
