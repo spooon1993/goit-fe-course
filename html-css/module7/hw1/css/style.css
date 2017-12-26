@@ -84,7 +84,7 @@
     margin-bottom: 110px;
     transition: all 0.5s;
 }
-.we-are-button:hover {
+button:hover {
     border: 2px solid #00e0d0;
     background-color: rgba(0, 0, 0, 0.3);
 }
