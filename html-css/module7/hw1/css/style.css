@@ -233,9 +233,75 @@ button:hover {
     margin-right: 0;
 }
 .team-item-img {
-    height: 227px;
+    width: 219px;
     margin-bottom: 29px;
 }
 .team > .button {
     margin-top: 0;
+}
+.works {
+    text-align: center;
+    padding: 70px 0;
+}
+.head-works {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+.works-images {
+    display: flex;
+    flex-wrap: wrap;
+}
+.works-images-img {
+    width: 16.6%;
+    height: 200px;
+    display: block;
+    background-color: grey;
+    border: 1px solid;
+}
+.comment {
+    padding: 70px 0;
+    background: url("../img/PUT YOUR BACKGROUND HERE (2).jpg") no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+.comment-item {
+    position: relative;
+    width: 770px;
+    margin: auto;
+}
+.comment-text {
+    margin-bottom: 52px;
+}
+.comment-text:before {
+    content: "\2018 \2018";
+    font-size: 60px;
+    position: absolute;
+    top: -52px;
+    left: 48%;
+}
+.comment-slider {
+    position: relative;
+    width: 391px;
+    margin: 45px auto 0;
+}
+.comment-slider:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+}
+.comment-slider:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 0;
 }
