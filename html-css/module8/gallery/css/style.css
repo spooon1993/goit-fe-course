@@ -60,7 +60,7 @@ a {
 }
 .menu-item {
 
-    flex-basis: 50%;
+    flex-basis: 33%;
     text-align: center;
 }
 .menu-link {
