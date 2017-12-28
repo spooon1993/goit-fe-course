@@ -61,3 +61,53 @@
 .header{
     margin-bottom: 3.75rem;
 }
+/*media for 768px*/
+
+@media (min-width: 768px) {
+    .menu {
+        width: 37.36%;
+    }
+    .header {
+        margin-bottom: 1.188rem;
+    }
+}
+
+/*media for 1024px*/
+
+@media (min-width: 1024px) {
+    .menu {
+        flex-wrap: nowrap;
+        width: 80.76%;
+    }
+    .header {
+        position: relative;
+        padding: 3rem 0;
+        margin-bottom: 3.188rem;
+    }
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 8.625rem;
+        height: 8.625rem;
+        line-height: 8.625rem;
+        font-size: 3.75rem;
+    }
+    .menu-link {
+        font-size: 1.75rem;
+    }
+    .menu-item:nth-child(3) {
+        margin-right: 6.25rem;
+    }
+    .menu-item:nth-child(4) {
+        margin-left: 6.25rem;
+    }
+    .sub-menu-item {
+        text-align: center;
+    }
+    .sub-menu-link {
+        font-size: 1.25rem;
+    }
+}
