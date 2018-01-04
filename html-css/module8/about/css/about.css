@@ -1,0 +1,133 @@
+/*font-family: 'Dorsa', sans-serif;*/
+/*font-family: 'Pathway Gothic One', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+@import "base.css";
+@import "header.css";
+@import "footer.css";
+body {
+    counter-reset: count-principles__item;
+}
+.about {
+    background-color: #ffffff;
+    padding: 3.75rem 2.313rem 4.688rem;
+}
+.about:after {
+    content: "\f062";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #38afe5;
+    border-radius: 50%;
+    position: fixed;
+    right: 1.5%;
+    bottom: 2%;
+    font-family: 'FontAwesome', sans-serif;
+    text-align: center;
+    line-height: 1.5rem;
+    color: #fff;
+    font-size: 0.75rem;
+}
+.title2 {
+    font-size: 1.563rem;
+    color:  #263555;
+    font-family: 'Pathway Gothic One', sans-serif;
+    margin-bottom: 1.875rem;
+    text-transform: uppercase;
+}
+.title3 {
+    font-size: 0.875rem;
+    color:  #263555;
+    font-family: Arial, sans-serif;
+    margin-bottom: 1.063rem;
+}
+.text {
+    font-size: 0.75rem;
+    color:  #4e5050;
+    font-family: Arial, sans-serif;
+}
+.info {
+    margin-bottom: 3.188rem;
+}
+.info__img {
+    width: 25.38rem;
+    height: 6.125rem;
+    margin-bottom: 1.688rem;
+}
+.info__title2 {
+    margin-bottom: 2rem;
+}
+.principles__list {
+    padding-left: 2.813rem;
+}
+.principles__item {
+    margin-bottom: 1.688rem;
+    position: relative;
+    counter-increment: count-principles__item;
+}
+.principles__item:last-child {
+    margin-bottom: 0;
+}
+.principles__item:before {
+    content: counter(count-principles__item);
+    display: block;
+    position: absolute;
+    border: 1px solid #263555;
+    left: -45px;
+    background: #38afe5;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+.principles {
+    padding-bottom: 3.125rem;
+    border-bottom: 1px solid;
+}
+.offer {
+    padding-top: 3.313rem;
+    margin-bottom: 4.125rem;
+}
+.offer__lists {
+    margin-top: 2.313rem;
+    display: flex;
+    justify-content: space-around;
+}
+.offer__item {
+    margin-bottom: 1.125rem;
+    position: relative;
+}
+.offer__item:last-child {
+    margin-bottom: 0;
+}
+.offer__item:before {
+    content: "\2192 ";
+    color: blue;
+    position: absolute;
+    left: -20px;
+}
+.testimonial {
+    text-align: center;
+}
+.testimonial__title2 {
+    text-align: left;
+}
+.testimonial__comment {
+    width: 14.94rem;
+    margin: 0 auto 1.188rem;
+    background-image: url("../img/mob/Layer85copy.png");
+}
+
+
+/*media for 768px*/
+
+@media (min-width: 768px) {
+
+}
+
+/*media for 1024px*/
+
+@media (min-width: 1024px) {
+
+}
