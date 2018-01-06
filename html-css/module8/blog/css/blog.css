@@ -1,0 +1,185 @@
+/*font-family: 'Dorsa', sans-serif;*/
+/*font-family: 'Pathway Gothic One', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+@import "base.css";
+@import "header.css";
+@import "footer.css";
+
+
+.blog:after {
+    content: "\f062";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #38afe5;
+    border-radius: 50%;
+    position: fixed;
+    right: 1.5%;
+    bottom: 2%;
+    font-family: 'FontAwesome', sans-serif;
+    text-align: center;
+    line-height: 1.5rem;
+    color: #fff;
+    font-size: 0.75rem;
+}
+.blog {
+    background-color: #ffffff;
+    padding: 3.75rem 2.313rem 4.688rem;
+}
+.title2 {
+    color:  #263555;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 1.563rem;
+}
+.title4 {
+    font-size: 0.875rem;
+    color:  #263555;
+    font-family: Arial, sans-serif;
+    margin-bottom: 1.063rem;
+}
+.title5 {
+    color:  #263555;
+    font-family: Arial, sans-serif;
+    font-size: 0.8125rem;
+}
+.title6 {
+    color:  #868f8f;
+    font-size: 0.625rem;
+    font-family: Arial, sans-serif;
+}
+.text {
+    font-size: 0.6875rem;
+    color:  #4e5050;
+    font-family: Arial, sans-serif;
+}
+.post {
+    padding: 2.75rem 0 2.125rem;
+    border-bottom: 1px solid;
+}
+.post:last-child {
+    border-bottom: none;
+}
+.caption {
+    margin-left: 2.688rem;
+    position: relative;
+}
+.caption:before {
+    content: "23 Apr";
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    left: -2.188rem;
+    color: #fff;
+    font-size: 0.5625rem;
+    font-family: Arial, sans-serif;
+    background-color: #0c4994;
+    border-radius: 50%;
+    text-align: center;
+}
+.caption__info {
+    display: flex;
+    justify-content: space-between;
+}
+.post__img {
+    margin: 1.5rem 0;
+}
+.button {
+    width: 17.44rem;
+    height: 1.875rem;
+    border-color:  rgba(159, 150, 150, 81);
+    border-radius: 20%;
+    display: block;
+    margin: 1.375rem auto 0;
+}
+.box {
+    padding: 2.75rem 0 0;
+}
+.categories__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2.625rem;
+}
+.categories__item {
+    flex-basis: 45%;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+.categories__item:before {
+    content: "\2192";
+    color: blue;
+    position: absolute;
+    left: -1.3rem;
+    top: -0.2rem;
+}
+.list__text {
+    font-size: 0.75rem;
+    color:  #263555;
+    font-family: Arial, sans-serif;
+}
+.archive__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2.625rem;
+}
+.archive__item {
+    flex-basis: 27%;
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+.archive__item:before {
+    content: "\2192";
+    color: blue;
+    position: absolute;
+    left: -1.3rem;
+    top: -0.2rem;
+}
+
+@media (min-width: 768px) {
+    .post__item {
+        display: flex;
+        justify-content: space-between;
+    }
+    .post__pict {
+        flex-basis: 45%;
+    }
+    .post__text {
+        flex-basis: 50%;
+    }
+    .post__img {
+        margin: 0;
+    }
+    .caption {
+        margin-bottom: 1.125rem;
+    }
+    .button {
+        width: 4.125rem;
+        height: 1.438rem;
+        margin: 1.25rem 0 0;
+    }
+    .categories__list {
+        flex-direction: column;
+    }
+    .categories-archive {
+        display: flex;
+        justify-content: space-around;
+    }
+    .archive {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .boxes {
+        display: flex;
+    }
+    .categories-archive {
+        display: block;
+        flex-basis: 80%;
+        padding-left: 1.875rem;
+    }
+    .archive__list {
+        display: block;
+    }
+}
