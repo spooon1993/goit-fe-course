@@ -88,8 +88,14 @@
 }
 .country__info {
     background-color: #122C46;
-    flex-basis: 93%;
     padding: 0.6875rem 0.875rem;
+    display: none;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+.country:hover .country__info {
+    display: block;
 }
 .country__info__button {
     margin-left: auto;
@@ -99,8 +105,8 @@
     margin: 0.8125rem 0 0.5rem;
 }
 .country {
-    display: flex;
     margin-bottom:  2.375rem;
+    position: relative;
 }
 .country:last-child {
     margin-bottom: 0;
@@ -154,6 +160,7 @@
 }
 .news__title3 {
     color:  #263555;
+    font-family: 'Open Sans', sans-serif;
 }
 .title4 {
     color:  #263555;
@@ -193,6 +200,7 @@
     font-size: 0.5rem;
     text-align: center;
     line-height: 0.65rem;
+    color: #fff;
 }
 
 
@@ -236,7 +244,61 @@
     .news__form {
         flex-basis: 100%;
     }
+    .tabs__info {
+        display: flex;
+        justify-content: space-between;
+    }
+    .tabs__info__img, .tabs__description {
+        flex-basis: 60%;
+    }
+
 }
 
 
-
+@media (min-width:1024px) {
+    .ship__text1 {
+        font-size: 1.375rem;
+        left: 11.1%;
+    }
+    .ship__text2 {
+        font-size: 2.125rem;
+        left: 13.8%;
+        top: 53%;
+    }
+    .ship__circle {
+        width: 5.625rem;
+        height: 5.625rem;
+        line-height: 5.625rem;
+    }
+    .country {
+        flex-basis: 32%;
+    }
+    .country:last-child {
+        display: block;
+    }
+    .tabs-news {
+        display: flex;
+        justify-content: space-between;
+    }
+    .tabs {
+        flex-basis: 63%;
+    }
+    .news {
+        flex-basis: 35%;
+    }
+    .news__window {
+        display: block;
+    }
+    .news__target__list {
+        display: block;
+    }
+    .news__target {
+        padding-left: 1.125rem;
+    }
+    .tabs__marb {
+        margin-bottom: 0;
+    }
+    .tabs__description {
+        flex-basis: 43%;
+    }
+}
