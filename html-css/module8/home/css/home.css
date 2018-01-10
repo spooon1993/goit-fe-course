@@ -54,6 +54,9 @@
     text-transform: uppercase;
     padding: 0.4375rem;
 }
+.ship__circle {
+    display: none;
+}
 .title2 {
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 1.563rem;
@@ -226,6 +229,7 @@
         bottom: 1.813rem;
         left: 1.688rem;
         color: #ffffff;
+        display: block;
     }
     .destination__container {
         display: flex;

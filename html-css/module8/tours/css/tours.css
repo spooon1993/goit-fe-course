@@ -1,0 +1,28 @@
+/*font-family: 'Dorsa', sans-serif;*/
+/*font-family: 'Pathway Gothic One', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+@import "base.css";
+@import "header.css";
+@import "footer.css";
+.tours{
+    background-color: #ffffff;
+    padding: 3.75rem 2.313rem 4.688rem;
+}
+.tours:after {
+    content: "\f062";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #38afe5;
+    border-radius: 50%;
+    position: fixed;
+    right: 1.5%;
+    bottom: 2%;
+    font-family: 'FontAwesome', sans-serif;
+    text-align: center;
+    line-height: 1.5rem;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+
