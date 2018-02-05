@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.img {
+    width: 50%;
+    height: auto;
+    display: block;
+    flex-basis: 20%;
+    border-radius: 13%;
+}
