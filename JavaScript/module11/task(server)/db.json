@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Poly",
+      "score": "14"
+    },
+    {
+      "id": "3",
+      "name": "Ajax",
+      "score": "6"
+    },
+    {
+      "id": "4",
+      "name": "Chelsey",
+      "score": "18"
+    },
+    {
+      "id": "59",
+      "name": "Rest",
+      "score": "305"
+    },
+    {
+      "id": "60",
+      "name": "Open44",
+      "score": "146444"
+    },
+    {
+      "id": "61",
+      "name": "Google",
+      "score": "50"
+    },
+    {
+      "id": "67",
+      "name": "Qwerty",
+      "score": "134"
+    },
+    {
+      "id": "2830",
+      "name": "Serega",
+      "score": "10000"
+    }
+  ]
+}
