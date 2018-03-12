@@ -1,0 +1,11 @@
+mkdir react-test
+cd react-test
+npm init
+npm i webpack -g
+npm i webpack-dev-server --save
+npm install babel-loader babel-core babel-preset-env --save
+npm i babel-preset-react --save
+npm i babel-plugin-transform-decorators-legacy --save
+npm i babel-plugin-transform-class-properties --save
+webpack-dev-server
+

@@ -1,0 +1,29 @@
+.wrapper {
+    border: 1px solid black;
+    width: 400px;
+}
+.header {
+    border: 1px solid black;
+}
+.content {
+    border: 1px solid black;
+    text-align: center;
+}
+.list {
+    list-style: none;
+    padding: 0;
+    width: 200px;
+    margin: auto;
+}
+.list-item {
+    background-color: #eee;
+}
+.label-text {
+    color: #8587fd;
+}
+.done {
+    text-decoration: line-through;
+}
+.label-check {
+
+}

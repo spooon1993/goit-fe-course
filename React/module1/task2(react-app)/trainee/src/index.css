@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.post{
+  border: 1px solid black;
+  width: 400px;
+  text-align: center;
+}
+.post h1 {
+  font-size: 36px;
+  color: #b93aff;
+}
+.post img {
+  display: block;
+  margin: auto;
+}
+.post span {
+  color: red;
+}
+.post .likeImg {
+  display: inline;
+  width: 50px;
+}
+
