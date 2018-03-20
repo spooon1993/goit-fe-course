@@ -6,7 +6,7 @@ class Training extends Component {
     state = {
         active: false,
         Tasks: ['task1','task2','task3','task4','task5','task6'],
-        dateInit: Date.now(),
+        dateInit: new Date(),
         dateComplete: [],
         dateStop: '',
         styles: {
@@ -18,8 +18,8 @@ class Training extends Component {
         let min = sec / 60;
         let hour = min / 60;
         return {sec: Math.floor(sec) % 60,
-        min: Math.floor(min) % 60,
-        hour: Math.floor(hour) % 24}
+            min: Math.floor(min) % 60,
+            hour: Math.floor(hour) % 24}
     };
     dateAdd = () => {
         let dateNow = Date.now();
@@ -29,11 +29,13 @@ class Training extends Component {
         })
     };
     dateStop = () => {
+        let stopDate = new Date();
+        stopDate.getMinutes() - this.state.dateInit.getMinutes();
         let summDate = this.state.dateComplete.reduce((acum, item) => {
             return acum + item;
         });
         this.setState( { dateStop: this.timeToHuman(summDate),
-        styles: {display: 'block'}} );
+            styles: {display: 'block'}} );
     };
     render () {
         // setInterval(()=>{
@@ -45,8 +47,9 @@ class Training extends Component {
 
         return (
             <div>
-                {this.state.Tasks.map((item,index) => {
+                {this.state.Tasks.map((task, index) => {
                     return <Tasks key={index} name={item} id={item} addTime={this.dateAdd} />
+                    return <Tasks checked={task.chacked} disabled={this.state.done} />
                 })}
                 <div>
                     <h2>Тренировка длиться</h2>

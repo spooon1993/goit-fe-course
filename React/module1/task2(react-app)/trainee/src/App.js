@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
-import News from './components/News.js'
-import UserList from './components/UserList.js'
-import TrainderSelect from './components/TrainersSelect.js'
-import Trainer from './components/Trainer.js'
-import Training from './components/Training.js'
+import TrainderSelect from './components/training/TrainersSelect/TrainersSelectPage.js'
+import Training from './components/training/Training/TrainingPage.js'
+import CrossFit from '../src/components/CrossFit'
+
 class App extends Component {
     render() {
         return (
             <div className="App">
+                <CrossFit/>
+                <span>================</span>
                 <Training/>
+                <span>================</span>
                 <TrainderSelect/>
                 {/*<UserList/>*/}
                 {/*<span>===============</span>*/}

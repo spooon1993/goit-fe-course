@@ -1,0 +1,12 @@
+.select {
+    border: solid;
+}
+.select__list {
+    display: none;
+}
+.select__list--visible {
+    display: block;
+}
+.select__item:hover {
+    background-color: #d2e1ee;
+}
