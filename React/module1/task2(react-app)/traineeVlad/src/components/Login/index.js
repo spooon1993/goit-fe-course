@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import {Button, TextInput, ErrorMessage} from "../ui";
+import {Button, TextInput, ErrorMessage , Header, BackArrow, Title}
+    from "../ui";
+import Select from "../ui/Select";
 import {withRouter, Link} from "react-router-dom";
 import {getLogged} from "../../utils";
 import styled from 'styled-components';
-import UsernameIcon from '../../assets/icons/icon-username.svg'
-import PasswordIcon from '../../assets/icons/icon-password.svg'
+import UsernameIcon from '../../assets/icons/icon-username.svg';
+import PasswordIcon from '../../assets/icons/icon-password.svg';
+//import SmileIcon from '../../assets/icons/icon-smile.svg';
+//import EmailIcon from '../../assets/icons/icon-email.svg';
+//import MoreIcon from '../../assets/icons/icon-more.svg';
 
 
 const media = {
@@ -26,7 +31,7 @@ const SubLogo = styled(Logo)`
     font-size: 40px;
 `;
 
-const Container = styled.div`
+const Wrapper = styled.div`
     display:flex;
     flex-direction: column;
     width: 100%;
@@ -57,21 +62,7 @@ const StyledLink = styled(Link)`
     text-decoration: none;
     font-size: 11px;
 `
-const HeaderContainer = styled.div`
-    //margin: 0 auto;
-    display: flex;
-    justify-content: center;
-`
-const HeaderArrow = styled.span`
-    width: 20px;
-    height: 20px;
-    background-color: #FFEB3B;
-    display: block;
-`
-const HeaderTitle = styled(SubLogo)`
-    font-size: 25px;
-    letter-spacing: 0.3em;
-`
+
 
 // Оборачиваем в withRouter, чтобы получить доступ
 // к this.props.history, нужен для редиректа
@@ -131,7 +122,7 @@ class Login extends Component{
 
     render(){
         return (
-        <Container>
+        <Wrapper>
             <Logo>TNR</Logo>
             <SubLogo>APP</SubLogo>
             <InputCenter>
@@ -156,84 +147,54 @@ class Login extends Component{
                     <StyledLink to="/">Need help?</StyledLink>
                 </LinkContainer>
             </InputCenter>
-
-        </Container>
+        </Wrapper>
         )
     }
 
 }
 
 export class SignupLocal extends Component {
-    state = {
-        name: '',
-        email: '',
-        password: ''
-    }
-    onChange = (inputName, event) => {
-        // Получили значения инпута
-        let value = event.target.value;
-        this.setState({
-            // Аналог obj[inputName]
-            // Вместо ключа используем переменную
-            // Получаем через bind, когда привязываем к инпуту событие
-            [inputName]: value
-        })
-    };
-    onSignup = () => {
-        if (this.state.name.length < 1 || this.state.password.length < 1) {
-            this.setState({
-                visible: true
-            })
-        } else {
-            console.log({
-                name: this.state.name,
-                email: this.state.email,
-                password: this.state.password
-            })
-        }
-    }
-
     render(){
         return(
-            <Container>
-                <HeaderContainer>
-                    <HeaderArrow/>
-                    <HeaderTitle>Create account</HeaderTitle>
-                </HeaderContainer>
+            <Wrapper>
+                <Header>
+                    <BackArrow theme="light"/>
+                    <Title theme="light">
+                        Create Account
+                    </Title>
+                </Header>
                 <InputCenter>
-                    <ErrorMessage visible={this.state.visible}>Incorrect data</ErrorMessage>
-                    <TextInput placeholder='How are you?' type='text'/>
+                    <Select placeholder="Who are you?">
+                        <Select.Option>Coach</Select.Option>
+                        <Select.Option>Trainee</Select.Option>
+                    </Select>
+
+                    <TextInput image={UsernameIcon}
+                               placeholder="Your name"
+                               type="text" />
+
                     <TextInput
-                        placeholder='Your name'
-                        type='text'
-                        image={UsernameIcon}
-                        onChange={this.onChange.bind(this, 'name')}
-                    />
-                    <TextInput
-                        placeholder='Your e-mail'
-                        type='email'
-                        onChange={this.onChange.bind(this, 'email')}
-                    />
-                    <TextInput
-                        placeholder='Your Password'
-                        type='password'
-                        image={PasswordIcon}
-                        onChange={this.onChange.bind(this, 'password')}
-                    />
-                    <ButtonStart
-                        type='button'
-                        onClick={this.onSignup}
-                    >Get started</ButtonStart>
+                               placeholder="Your email"
+                               type="email" />
+
+                    <TextInput image={PasswordIcon}
+                               placeholder="Password"
+                               type="password" />
+
+                    <ButtonStart type="button"
+                                 onClick={this.onLogin}>
+                        get started
+                    </ButtonStart>
                     <LinkContainer>
                         <StyledLink to="/login">Login</StyledLink>
                         <StyledLink to="/">Need help?</StyledLink>
                     </LinkContainer>
                 </InputCenter>
-            </Container>
-
+            </Wrapper>
         )
     }
 }
+
 // Оборачиваем в withRouter, чтобы получить доступ
 // к this.props.history, нужен для редиректа
 export const Signup = withRouter(SignupLocal);

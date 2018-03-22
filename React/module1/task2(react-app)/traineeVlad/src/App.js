@@ -8,6 +8,8 @@ import Login, {Logout, Signup} from "./components/Login";
 import SelectTrainer from './components/training/SelectTrainer';
 import {getLogged, excludeProp} from "./utils";
 import Container from './components/Container';
+import UsersList from './components/Users'
+import CurrentUser from "./components/Users/CurrentUser";
 
 
 
@@ -49,8 +51,27 @@ class App extends Component {
 
                         <Route path="/signup" component={Signup} />
 
+                        <Route path="/training" component={Training} />
+
+
+
+
                         {/* Закрытые роуты */}
                         <PrivateRoute path="/home" component={SelectTrainer} title="Some Page"/>
+
+                        <PrivateRoute path="/users/:id/" component={CurrentUser} title="Current User"/>
+
+                        <PrivateRoute path="/users/" component={UsersList} title="Users List"/>
+
+
+
+
+
+
+                        {/*<PrivateRoute path="/users/:id/training/:type/day/:d" component={SelectExercises} title="SelectExercises"/>*/}
+
+
+
                         <Redirect to="/login"/>
                     </Switch>
                 </div>
