@@ -23,6 +23,24 @@ export const usersListArr = [
                         img: '../../assets/icons/icon-username.svg',
                     }
                 ],
+            }, {
+                day: 'thu',
+                exercises: [
+                    {
+                        name: 'exercises1',
+                        description: 'some text description',
+                        img: '../../assets/icons/icon-username.svg',
+                    }
+                ],
+            }, {
+                day: 'wed',
+                exercises: [
+                    {
+                        name: 'exercises1',
+                        description: 'some text description',
+                        img: '../../assets/icons/icon-username.svg',
+                    }
+                ],
             }
         ],
     },
@@ -97,7 +115,7 @@ export const NameTrainer = styled.h4`
     width: 40%;
     text-align: end;
 `;
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
     color: grey;
     text-decoration: none;
 `
@@ -112,7 +130,7 @@ class UsersList extends Component {
                 <p>UsersList Component</p>
                 {usersListArr.map( (user, index) => {
                     return (
-                        <StyledLink to={`/users/${user.id}`}>
+                        <StyledLink to={`/users/${user.id}`} key={index}>
                             <UserContainer key={index}>
                                 <Icon src={user.photo} />
                                 <NameContain>

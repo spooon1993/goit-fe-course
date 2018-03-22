@@ -1,28 +1,28 @@
 import React from 'react'
-import {Icon} from '../ui'
+import {Button, Icon} from '../ui'
 import styled from 'styled-components'
 import {UserContainer, NameContainer, NameUser, NameContain, NameTrainer} from './'
-
+import {Link} from 'react-router-dom'
 import {usersListArr} from './';
 import Exercise from "../training/Exercise";
 
-const ExercisesContainer = styled.div`
-  
+import {StyledLink} from './'
+
+const ExercisesContainer = styled(UserContainer)`
+  background-color: #eeeeee;
+  height: 100%;
 `;
+const Exercises = styled(UserContainer)``;
 const Day = styled.span``;
 const ExerciseList = styled.div``;
-const Exercises = styled.div``;
 const ExerciseName = styled.span``;
 const ExerciseDescription = styled.span``;
 
 
 
-let user1 = usersListArr[1];
-
 
 console.log(usersListArr);
 const CurrentUser = (props) => {
-    console.log(props);
     let user = usersListArr.filter( (user) => {
         return user.id === +props.match.params.id
     } );
@@ -45,37 +45,28 @@ const CurrentUser = (props) => {
                                 <span>{user.age}</span>
                             </NameContain>
                         </UserContainer>
-                        <ExercisesContainer>
 
+                        <ExercisesContainer>
+                            <ExerciseList className='ExercisesList'>
+                                {user.trainExercises.map( (ex, index) => {
+                                    return (
+                                        <Exercises className='exercise' key={index}>
+                                            <Day>{ex.day}</Day>
+                                            <ExerciseName>{ex.exercises[0].name}</ExerciseName>
+                                            <ExerciseDescription>{ex.exercises[0].description}</ExerciseDescription>
+                                            <Icon src={ex.exercises[0].img} />
+                                        </Exercises>
+                                    )
+                                } )}
+
+                            </ExerciseList>
                         </ExercisesContainer>
                     </div>
                 )
             } )}
-
-
-            <div className='UserHead'>
-                <UserContainer key='1'>
-                    <Icon src={user1.photo} />
-                    <NameContain>
-                        <NameUser>
-                            <h3>{user1.name}</h3>
-                            <h3>{user1.surname}</h3>
-                        </NameUser>
-                        <NameTrainer>{user1.trainer}</NameTrainer>
-                        <span>{user1.age}</span>
-                    </NameContain>
-                </UserContainer>
-                <ExercisesContainer>
-                    <Day>Day</Day>
-                    <ExerciseList className='allExercises'>
-                        <Exercises className='exercise'>
-                            <ExerciseName>Name</ExerciseName>
-                            <ExerciseDescription>Description</ExerciseDescription>
-                            <Icon />
-                        </Exercises>
-                    </ExerciseList>
-                </ExercisesContainer>
-            </div>
+            <StyledLink to={`/users/${props.match.params.id}/create/`}>
+                <Button>Add training</Button>
+            </StyledLink>
 
         </div>
     )

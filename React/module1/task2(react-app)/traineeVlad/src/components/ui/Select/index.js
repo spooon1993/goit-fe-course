@@ -37,6 +37,7 @@ const SelectValueItem = styled.div`
 
 const OptionContainer = styled.div`
     display: ${props => props.visible ? 'block' : 'none'};
+    z-index: 2;
     position: absolute;
     width: 80%;
     top: 50px;
@@ -126,7 +127,7 @@ class Select extends Component{
                 <OptionContainer visible={this.state.visible}>
                     {this.props.children.map((children, index) => {
                         return (
-                            <div onClick={this.chooseOption.bind(this, index)}>
+                            <div onClick={this.chooseOption.bind(this, index)} key={index}>
                                 {children}
                             </div>
                         )
