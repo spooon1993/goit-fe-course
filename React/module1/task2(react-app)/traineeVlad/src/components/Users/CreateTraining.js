@@ -9,7 +9,6 @@ class CreateTraining extends Component {
         exercisesNumber: [1],
     }
 
-
     addAnExercise = () => {
         this.setState( (prevState) => {
             let number = prevState.exercisesNumber[prevState.exercisesNumber.length - 1]
@@ -19,6 +18,7 @@ class CreateTraining extends Component {
             }
         } )
     }
+
 
     render(){
         return(

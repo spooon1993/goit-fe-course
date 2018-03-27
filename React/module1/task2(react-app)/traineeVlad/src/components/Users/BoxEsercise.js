@@ -7,6 +7,7 @@ const Box = styled.div`
 `;
 
 const BoxExercise = (props) => {
+    console.log('propss',props);
     return (
             <Box>
                 <span>num {props.num}</span>

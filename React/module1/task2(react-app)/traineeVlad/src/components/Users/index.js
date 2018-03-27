@@ -122,8 +122,6 @@ export const StyledLink = styled(Link)`
 
 class UsersList extends Component {
 
-
-
     render(){
         return(
             <div>
@@ -146,22 +144,6 @@ class UsersList extends Component {
                         </StyledLink>
                     )
                 } )}
-
-                {/*<StyledLink to='/users/2'>*/}
-                    {/*<UserContainer>*/}
-                        {/*<Icon src={UsernameIcon} />*/}
-                        {/*<NameContain>*/}
-                            {/*<NameUser>*/}
-                                {/*<h3>Name 123</h3>*/}
-                                {/*<h3>Surname</h3>*/}
-                            {/*</NameUser>*/}
-                            {/*<NameTrainer>trainer</NameTrainer>*/}
-                            {/*<span>age</span>*/}
-                        {/*</NameContain>*/}
-
-
-                    {/*</UserContainer>*/}
-                {/*</StyledLink>*/}
 
                 <span>ID: {this.props.match.params.id}</span>
             </div>

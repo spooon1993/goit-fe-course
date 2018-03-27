@@ -11,7 +11,9 @@ import Container from './components/Container';
 import UsersList from './components/Users'
 import CurrentUser from "./components/Users/CurrentUser";
 import CreateTraining from './components/Users/CreateTraining'
-
+import CheckboxList from './components/checkbox'
+import { Provider } from 'react-redux'
+import store from './components/checkbox/store'
 
 
 
@@ -36,6 +38,7 @@ const PrivateRoute = (props) => {
 class App extends Component {
   render() {
     return (
+        <Provider store={store}>
         <div>
             {/* Обертка для всего что использует роутинг */}
             <Router>
@@ -59,6 +62,8 @@ class App extends Component {
                         {/* Закрытые роуты */}
                         <PrivateRoute path="/home" component={SelectTrainer} title="Some Page"/>
 
+                        <PrivateRoute path="/checkbox" component={CheckboxList} title="Checkbox List"/>
+
                         <PrivateRoute path="/users/:id/create/" component={CreateTraining} title="Create Training"/>
 
                         <PrivateRoute path="/users/:id/" component={CurrentUser} title="Current User"/>
@@ -80,6 +85,7 @@ class App extends Component {
             </Router>
 
         </div>
+        </Provider>
 
     );
   }
