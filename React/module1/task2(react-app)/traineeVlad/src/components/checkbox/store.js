@@ -24,13 +24,18 @@ const tamplate = {
 const ACTIONS = {
     'ADD_NEW_CHECKBOX': 'ADD_NEW_CHECKBOX',
     'TOGGLE': 'TOGGLE',
+    'DELETE_CHECKBOX': 'DELETE_CHECKBOX',
 }
 
 const store = createStore((state = initialState, action) => {
     switch (action.type) {
         case ACTIONS.ADD_NEW_CHECKBOX: {
             return {
-                checkboxList: [...state.checkboxList, {...tamplate}]
+                checkboxList: [...state.checkboxList, {
+                    id: Math.random(),
+                    name: action.name,
+                    checked: false,
+                }]
             }
         }
         case ACTIONS.TOGGLE: {
@@ -41,6 +46,16 @@ const store = createStore((state = initialState, action) => {
                 }
                 return ex
             })
+            }
+        }
+        case ACTIONS.DELETE_CHECKBOX: {
+            return {
+                checkboxList: [...state.checkboxList.filter((ex) => {
+                    if(action.id === ex.id) {
+                        return false
+                    }
+                    return ex
+                })]
             }
         }
 
