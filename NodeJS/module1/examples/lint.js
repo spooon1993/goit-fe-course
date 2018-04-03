@@ -1,4 +1,4 @@
-const lint = (string) => {
+const syntax = (string) => {
     let reg = /[^{}()[\]"']/g;
     let stringReg = string.replace(reg, '');
     let arr = stringReg.split('');
@@ -12,6 +12,7 @@ const lint = (string) => {
     let mapsKey = Object.keys(maps);
     let result = [];
     arr.map( (item, index) => {
+        debugger
         if ( !mapsKey.includes(item) ) {
             result.push(item);
         } else if( result[result.length-1] === maps[item] ){
@@ -29,4 +30,4 @@ const lint = (string) => {
     }
 };
 
-module.exports = lint;
+module.exports = syntax;

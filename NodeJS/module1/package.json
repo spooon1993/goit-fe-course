@@ -8,5 +8,10 @@
     "develop": "supervisor -n app.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "jsdom": "^11.7.0",
+    "winston": "^3.0.0-rc3"
+  }
 }
