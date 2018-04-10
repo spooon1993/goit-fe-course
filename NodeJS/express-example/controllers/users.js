@@ -30,17 +30,18 @@ const controller = {
         Users.findByIdAndUpdate(req.params.id, {
             name: req.body.name,
             password: req.body.password,
-            email: req.params.email
+            email: req.body.email
         })
             .then((user) => {
-                req.data = user;
+                debugger
+                req.data = req.body;
                 next();
             })
     },
     delete(req, res, next){
         Users.findByIdAndRemove(req.params.id)
             .then((user) => {
-                req.data = user;
+                req.data = user._doc;
                 next();
             })
     }
