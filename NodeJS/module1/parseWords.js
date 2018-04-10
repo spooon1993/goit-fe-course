@@ -16,24 +16,22 @@ const getHTML = (link) => {
     });
 };
 
-const parseWord = (link, words) => {
-    let result = {};
-    getHTML(link)
+const parseWord = (link, words = ['html', 'css', 'js']) => {
+    return getHTML(link)
         .then((data) => {
+            let result = {};
             const dom = new JSDOM(data).window.document;
-            let textContent = dom.querySelector('.f-vacancy-inner-wrapper').textContent.split(' ');
+            let textContent = dom.body.textContent;
             words.map((word) => {
                 result[word] = textContent.includes(word)
             });
             console.log(result);
-            return result;
+            return Promise.resolve(result);
         });
-
 };
 
 module.exports = parseWord;
-parseWord('https://rabota.ua/ua/company5209337/vacancy6793918', ['Опубліковано', 'кодом', 'реєстрації']);
+// parseWord('https://rabota.ua/ua/company5209337/vacancy6793918', ['Опубліковано', 'кодом', 'реєстрації']);
+// parseWord('https://www.work.ua/jobs/3121880/', ['Опубліковано', 'кодом', 'реєстрації']);
+// parseWord('https://www.work.ua/jobs/3121880/');
 
-let res1 = parseWord('https://rabota.ua/ua/company5209337/vacancy6793918', ['Опубліковано', 'кодом', 'реєстрації']);
-console.log('res1',res1);
-debugger
