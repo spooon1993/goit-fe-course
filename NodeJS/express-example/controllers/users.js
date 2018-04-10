@@ -33,7 +33,6 @@ const controller = {
             email: req.body.email
         })
             .then((user) => {
-                debugger
                 req.data = req.body;
                 next();
             })
