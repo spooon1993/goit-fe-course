@@ -1,6 +1,6 @@
 const prepareBody = (req, res, next) => {
     req.responseData = {
-        status: 200,
+        status: res.statusCode,
         data: req.data,
         errors: [],
         warnings: []

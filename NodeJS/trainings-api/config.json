@@ -1,0 +1,4 @@
+{
+  "devDb": "mongodb://localhost:27017/goit",
+  "testDb": "mongodb://localhost:27017/vegetables-test"
+}

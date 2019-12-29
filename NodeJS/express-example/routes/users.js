@@ -1,6 +1,7 @@
 const route = require('express').Router();
 const prepareBody = require('../controllers/prepareBody');
 const controller = require('../controllers/users');
+const auth = require('../controllers/auth');
 
 route.get('/',  controller.readAll, prepareBody, (request, response) => {
     response.json(request.responseData);
@@ -19,6 +20,10 @@ route.put('/:id', controller.update, prepareBody, (request, response) => {
 });
 
 route.delete('/:id', controller.delete, prepareBody, (request, response) => {
+    response.json(request.responseData);
+});
+
+route.post('/auth/', auth, (request, response) => {
     response.json(request.responseData);
 });
 

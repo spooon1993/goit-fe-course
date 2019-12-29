@@ -1,27 +1,26 @@
 require('./utils/db');
 const app = require('express')();
 const PORT = 9999;
-app.listen(PORT);
-
-const testRoute = require('./routes/test');
-const vegetablesRoute = require('./routes/vegetables');
+app.listen(PORT, () => {
+    console.log('Server is started!');
+});
 const bodyParser = require('body-parser');
-const usersRoute = require('./routes/users');
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+const sportsmanRoute = require('./routes/sportsman');
 
 app.use((request, response, next) => {
     console.log(request.url);
     next();  //передача действий следующей функции
 });
 
-app.use('/test/', testRoute);
+app.use('/sportsman/', sportsmanRoute);
 
-app.use('/vegetables/', vegetablesRoute);
-
-app.use('/users/', usersRoute);
-
-app.use('/user/:id/test/:id', (req, res) => {debugger});
-
-console.log('text 2');
+app.use((err, req, res, next) => {
+    res.json({
+        status: err.status,
+        data: null,
+        errors: [err.message]
+    });
+});

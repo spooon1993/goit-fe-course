@@ -12,6 +12,10 @@ const controller = {
             req.data = vegetable._doc;
             next()
         })
+        .catch((err) => {
+            req.data = 'Failed!';
+            next();
+        })
     },
     readAll(req, res, next){
         Vegetables.find({}).exec()
